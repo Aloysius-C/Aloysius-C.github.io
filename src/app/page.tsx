@@ -1,32 +1,33 @@
 import Image from "next/image";
-import testPic from "../../public/images/TestPhoto.jpg";
+import profilePic from "../../public/images/profilePhoto.jpg";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-      <div className="flex items-center justify-center min-h-screen">
-        <Image
-          className=""
-          src={testPic}
-          alt="Next.js logo"
-          width={500}
-          height={1}
-          priority
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen pw-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <header className="flex flex-col gap-8 row-start-1 items-center sm:items-start">
+      <div className="flex flex-col sm:flex-row items-center justify-center min-h-screen gap-8 px-8">
+        {/* Image Section */}
+        <Image 
+          src={profilePic} 
+          alt="Aloysius" 
+          className="w-40 h-40 rounded-full object-cover"
         />
-        </div>
 
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see changes instantly.</li>
-          <li>This is another line </li>
-        </ol>
+        {/* Text Section */}
+        <div className="flex flex-col text-center sm:text-left">
+          <h1 className="text-3xl font-bold">Hi, I am Aloysius</h1>
+          <h2 className="text-xl font-medium mt-2">
+            A software and fullstack developer with a love for systems and efficiency
+          </h2>
+        </div>
+      </div>
+
+      </header>
+
+
+      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+
+
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
@@ -37,7 +38,7 @@ export default function Home() {
           >
             <Image
               className=""
-              src={testPic}
+              src={profilePic}
               alt="Vercel logomark"
               width={20}
               height={20}
