@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -26,38 +27,42 @@ export default function Navbar() {
 
 
 export  function Tabs() {
-  const [activeTab, setActiveTab] = useState("Tab1");
+  const [activeTab, setActiveTab] = useState("Work");
 
   return (
-    <div className="w-full max-w-md mx-auto bg-white shadow-lg rounded-lg p-4">
+    <div className="w-full max-w-6x1 mx-auto bg-white shadow-lg rounded-lg p-1">
       {/* Tab Headers */}
       <div className="flex border-b">
         <button
-          className={`flex-1 py-2 text-center ${
-            activeTab === "Tab1"
-              ? "border-b-2 border-blue-500 font-bold"
+          className={`flex-1 py-3 text-center ${
+            activeTab === "Work"
+              ? "bg-blue-500 text-white font-bold"
               : "text-gray-500"
           }`}
-          onClick={() => setActiveTab("Tab1")}
+          onClick={() => setActiveTab("Work")}
         >
-          Tab 1
+          Work
         </button>
         <button
-          className={`flex-1 py-2 text-center ${
-            activeTab === "Tab2"
-              ? "border-b-2 border-blue-500 font-bold"
+          className={`flex-1 py-3 text-center ${
+            activeTab === "Education"
+              ? "bg-blue-500 text-white font-bold"
               : "text-gray-500"
           }`}
-          onClick={() => setActiveTab("Tab2")}
+          onClick={() => setActiveTab("Education")}
         >
-          Tab 2
+          Education
         </button>
       </div>
 
       {/* Tab Content */}
-      <div className="p-4">
-        {activeTab === "Tab1" && <p>This is the content for Tab 1.</p>}
-        {activeTab === "Tab2" && <p>This is the content for Tab 2.</p>}
+      <div className="p-20">
+        {activeTab === "Work" && <p className=" text-black">
+          This is the content for Tab 1.
+          </p>}
+        {activeTab === "Education" && <p className=" text-black">
+          This is the content for Tab 2.
+          </p>}
       </div>
     </div>
   );
